@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamearthgamezone - Premier Gaming Cafe in Pune</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Orbitron & Rajdhani & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#080a11',
+                            card: 'rgba(15, 23, 42, 0.75)',
+                            cyan: '#00f0ff',
+                            pink: '#ff007f',
+                            purple: '#7928ca',
+                            yellow: '#facc15',
+                            green: '#10b981'
+                        }
+                    },
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2s infinite alternate',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%': { boxShadow: '0 0 15px rgba(0, 240, 255, 0.4)' },
+                            '100%': { boxShadow: '0 0 35px rgba(255, 0, 127, 0.7)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Neon Effects & Glassmorphism */
+        body {
+            background-color: #080a11;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .neon-text-cyan {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.8), 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+
+        .neon-text-pink {
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.8), 0 0 20px rgba(255, 0, 127, 0.4);
+        }
+
+        .neon-border-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+            border-color: #00f0ff;
+        }
+
+        .neon-border-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+            border-color: #ff007f;
+        }
+
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-panel-hover:hover {
+            border-color: rgba(0, 240, 255, 0.5);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .grid-bg {
+            background-image: linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 0, 127, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080a11;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+            border: 1px solid #00f0ff;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f0ff;
+        }
+    </style>
+</head>
+<body class="grid-bg font-sans antialiased selection:bg-cyber-cyan selection:text-black">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-cyber-purple via-cyber-pink to-cyber-cyan text-white text-xs md:text-sm py-1.5 px-4 text-center font-rajdhani font-semibold tracking-widest flex items-center justify-center gap-2">
+        <i class="fa-solid fa-bell animate-bounce"></i>
+        <span>HOLIDAY NOTICE: Diwali / Balipratipada festival timing updates may apply. Call ahead for slot confirmation!</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 glass-panel border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyber-cyan to-cyber-pink p-[2px] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-cyber-bg rounded-[6px] flex items-center justify-center">
+                        <i class="fa-solid fa-gamepad text-cyber-cyan text-xl group-hover:text-cyber-pink transition-colors"></i>
+                    </div>
+                </div>
+                <div>
+                    <span class="font-orbitron font-extrabold text-xl sm:text-2xl tracking-wider text-white">
+                        GAMEARTH<span class="text-cyber-cyan">ZONE</span>
+                    </span>
+                    <span class="block text-[10px] text-slate-400 font-rajdhani uppercase tracking-widest -mt-1">Pune Gaming Zone</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-rajdhani font-semibold text-lg tracking-wide text-slate-300">
+                <a href="#hero" class="hover:text-cyber-cyan transition-colors">Home</a>
+                <a href="#rigs" class="hover:text-cyber-cyan transition-colors">Rigs & Consoles</a>
+                <a href="#pricing" class="hover:text-cyber-cyan transition-colors">Rates</a>
+                <a href="#reviews" class="hover:text-cyber-cyan transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-cyber-cyan transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA Buttons & Status -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <!-- Status Badge -->
+                <div id="status-badge" class="flex items-center gap-2 px-3 py-1 rounded-full text-xs font-rajdhani font-bold border border-emerald-500/40 bg-emerald-950/40 text-emerald-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span id="status-text">OPEN NOW</span>
+                </div>
+
+                <a href="#booking" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-orbitron font-bold rounded-lg group bg-gradient-to-br from-cyber-cyan via-cyber-purple to-cyber-pink group-hover:from-cyber-cyan group-hover:to-cyber-pink hover:text-white text-white shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/50 transition-all duration-300">
+                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-cyber-bg rounded-md group-hover:bg-opacity-0">
+                        BOOK A SEAT
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-cyber-cyan focus:outline-none p-2" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-slate-800 px-4 pt-3 pb-6 space-y-4 font-rajdhani text-lg font-bold">
+            <a href="#hero" class="block text-slate-200 hover:text-cyber-cyan py-1 border-b border-slate-800">Home</a>
+            <a href="#rigs" class="block text-slate-200 hover:text-cyber-cyan py-1 border-b border-slate-800">Rigs & Consoles</a>
+            <a href="#pricing" class="block text-slate-200 hover:text-cyber-cyan py-1 border-b border-slate-800">Rates</a>
+            <a href="#reviews" class="block text-slate-200 hover:text-cyber-cyan py-1 border-b border-slate-800">Reviews</a>
+            <a href="#contact" class="block text-slate-200 hover:text-cyber-cyan py-1 border-b border-slate-800">Contact & Hours</a>
+            <div class="pt-2 flex flex-col gap-3">
+                <a href="tel:09270367171" class="w-full text-center py-2.5 rounded-lg border border-cyber-cyan text-cyber-cyan font-orbitron text-sm">
+                    <i class="fa-solid fa-phone mr-2"></i> Call: 092703 67171
+                </a>
+                <a href="#booking" class="w-full text-center py-2.5 rounded-lg bg-gradient-to-r from-cyber-cyan to-cyber-pink text-black font-orbitron font-extrabold text-sm">
+                    BOOK A SLOT NOW
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Background Lighting Blobs -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-cyber-cyan/15 rounded-full filter blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-cyber-pink/15 rounded-full filter blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-yellow-500/40 text-yellow-400 font-rajdhani font-semibold text-sm animate-pulse-glow">
+                        <div class="flex text-yellow-400 gap-1 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="font-bold text-white">4.9 ★</span>
+                        <span class="text-slate-400">| 457+ Google Reviews</span>
+                    </div>
+
+                    <h1 class="font-orbitron text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight">
+                        ELEVATE YOUR <br class="hidden sm:inline">
+                        <span class="bg-gradient-to-r from-cyber-cyan via-purple-400 to-cyber-pink bg-clip-text text-transparent">
+                            GAMING EXPERIENCE
+                        </span> <br>IN PUNE
+                    </h1>
+
+                    <p class="text-slate-300 font-rajdhani text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 font-medium">
+                        Welcome to <strong class="text-white">Gamearthgamezone</strong> — Katraj's top-rated esports shelter. Packed with ultra high-end RTX Gaming PCs, <span class="text-cyber-cyan font-bold">PS5 & PS5 Pro</span> consoles, 240Hz monitors, and ambient immersive RGB setups.
+                    </p>
+
+                    <!-- Feature Pills -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+                        <span class="px-3 py-1.5 rounded-md glass-panel text-xs font-rajdhani font-bold text-slate-200 border-l-2 border-cyber-cyan flex items-center gap-2">
+                            <i class="fa-solid fa-microchip text-cyber-cyan"></i> High-End PC Rigs
+                        </span>
+                        <span class="px-3 py-1.5 rounded-md glass-panel text-xs font-rajdhani font-bold text-slate-200 border-l-2 border-cyber-pink flex items-center gap-2">
+                            <i class="fa-brands fa-playstation text-cyber-pink"></i> PS5 & PS5 Pro
+                        </span>
+                        <span class="px-3 py-1.5 rounded-md glass-panel text-xs font-rajdhani font-bold text-slate-200 border-l-2 border-yellow-400 flex items-center gap-2">
+                            <i class="fa-solid fa-bolt text-yellow-400"></i> Ultra-Low Latency
+                        </span>
+                        <span class="px-3 py-1.5 rounded-md glass-panel text-xs font-rajdhani font-bold text-slate-200 border-l-2 border-emerald-400 flex items-center gap-2">
+                            <i class="fa-solid fa-indian-rupee-sign text-emerald-400"></i> Affordable Rates
+                        </span>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+                        <a href="#booking" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyber-cyan to-blue-600 text-black font-orbitron font-extrabold text-sm tracking-wider shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/60 hover:scale-105 transition-all text-center">
+                            <i class="fa-solid fa-gamepad mr-2"></i> BOOK YOUR SLOT NOW
+                        </a>
+                        <a href="tel:09270367171" class="px-8 py-4 rounded-xl glass-panel border border-slate-700 text-white hover:border-cyber-pink font-orbitron font-bold text-sm tracking-wider hover:bg-slate-900/60 transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone text-cyber-pink"></i> 092703 67171
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Card Display -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl p-1 bg-gradient-to-b from-cyber-cyan/40 via-cyber-purple/20 to-cyber-pink/40 shadow-2xl animate-float">
+                        <div class="glass-panel rounded-xl p-6 space-y-6">
+                            <!-- Visual Banner Placeholder -->
+                            <div class="relative h-64 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center group">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Esports Setup Gamearthgamezone" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
+                                     onerror="this.src='https://placehold.co/800x600/0f172a/00f0ff?text=Gamearthgamezone+Setup'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                                    <div>
+                                        <span class="text-xs font-orbitron text-cyber-cyan font-bold uppercase tracking-widest">Ambient Zone</span>
+                                        <h3 class="text-lg font-orbitron font-bold text-white">Pro Gaming Stations</h3>
+                                    </div>
+                                    <span class="px-2.5 py-1 rounded bg-cyber-pink text-white font-orbitron font-black text-xs">
+                                        PS5 PRO READY
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Highlights Grid inside Hero Card -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
+                                    <div class="text-cyber-cyan font-orbitron font-bold text-xl">4.9 ★</div>
+                                    <div class="text-xs text-slate-400 font-rajdhani uppercase font-semibold">User Satisfaction</div>
+                                </div>
+                                <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
+                                    <div class="text-cyber-pink font-orbitron font-bold text-xl">240 Hz</div>
+                                    <div class="text-xs text-slate-400 font-rajdhani uppercase font-semibold">Ultra Smooth Display</div>
+                                </div>
+                                <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
+                                    <div class="text-yellow-400 font-orbitron font-bold text-xl">100%</div>
+                                    <div class="text-xs text-slate-400 font-rajdhani uppercase font-semibold">Clean & Sanitized</div>
+                                </div>
+                                <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
+                                    <div class="text-emerald-400 font-orbitron font-bold text-xl">AC Zone</div>
+                                    <div class="text-xs text-slate-400 font-rajdhani uppercase font-semibold">Ergonomic Comfort</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Showcase & Features Section -->
+    <section id="rigs" class="py-20 relative bg-slate-950/60 border-t border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-cyber-cyan font-orbitron font-bold text-sm tracking-widest uppercase">Next-Gen Battle Stations</span>
+                <h2 class="text-3xl sm:text-4xl font-orbitron font-black text-white">THE ULTIMATE HARDWARE SELECTION</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-pink mx-auto rounded-full"></div>
+                <p class="text-slate-400 font-rajdhani text-lg">
+                    Whether you are climbing rank in Valorant or exploring 4K ultra graphics on PS5 Pro, we have the best setup customized for you.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: High End PCs -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 relative group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyber-cyan/40 flex items-center justify-center text-cyber-cyan text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <h3 class="text-xl font-orbitron font-bold text-white mb-2">High-Performance PCs</h3>
+                        <p class="text-slate-400 font-rajdhani text-base mb-6">
+                            Powered by latest Nvidia RTX Graphics cards, high FPS displays, and zero-lag optical peripherals.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-300 font-rajdhani font-semibold">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyber-cyan text-xs"></i> RTX Series GPU Specs</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyber-cyan text-xs"></i> 240Hz Ultra-Fast Gaming Displays</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyber-cyan text-xs"></i> Mechanical Keyboards & Light Mice</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyber-cyan text-xs"></i> Pre-installed Esports Titles</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-800 flex justify-between items-center">
+                        <span class="text-xs font-orbitron text-slate-400">FPS READY</span>
+                        <a href="#booking" class="text-cyber-cyan font-orbitron font-bold text-xs hover:underline">RESERVE PC &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: PS5 & PS5 Pro Consoles -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 relative group flex flex-col justify-between border-cyber-pink/30">
+                    <div class="absolute -top-3 right-6 bg-cyber-pink text-white text-[10px] font-orbitron font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                        POPULAR CHOICE
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-pink-500/10 border border-cyber-pink/40 flex items-center justify-center text-cyber-pink text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-playstation"></i>
+                        </div>
+                        <h3 class="text-xl font-orbitron font-bold text-white mb-2">PS5 & PS5 Pro Lounge</h3>
+                        <p class="text-slate-400 font-rajdhani text-base mb-6">
+                            Immerse in true 4K HDR couch gaming with DualSense haptic feedback controllers and massive 4K TVs.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-300 font-rajdhani font-semibold">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyber-pink text-xs"></i> Latest PS5 & PS5 Pro Consoles</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyber-pink text-xs"></i> FC 25, GTA V, Tekken 8, Mortal Kombat</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyber-pink text-xs"></i> Multiplayer Couch Co-op Controllers</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-cyber-pink text-xs"></i> 4K Ultra-HD Crisp Screens</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-800 flex justify-between items-center">
+                        <span class="text-xs font-orbitron text-slate-400">CONSOLE LOUNGE</span>
+                        <a href="#booking" class="text-cyber-pink font-orbitron font-bold text-xs hover:underline">RESERVE PS5 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Ambience & Clean Environment -->
+                <div class="glass-panel rounded-2xl p-6 glass-panel-hover transition-all duration-300 relative group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/40 flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-couch"></i>
+                        </div>
+                        <h3 class="text-xl font-orbitron font-bold text-white mb-2">Clean Setup & Staff Support</h3>
+                        <p class="text-slate-400 font-rajdhani text-base mb-6">
+                            Gamers love our pristine environment, comfortable seating, cool air-conditioning, and cooperative staff.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-300 font-rajdhani font-semibold">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-400 text-xs"></i> Ergonomic High-Back Chairs</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-400 text-xs"></i> Fully Air Conditioned & Ambient Neon</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-400 text-xs"></i> Sanitized Headsets & Gear</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-purple-400 text-xs"></i> Friendly Staff Assistance</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-800 flex justify-between items-center">
+                        <span class="text-xs font-orbitron text-slate-400">PREMIUM COMFORT</span>
+                        <a href="#booking" class="text-purple-400 font-orbitron font-bold text-xs hover:underline">JOIN US TODAY &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing / Rate Cards Section -->
+    <section id="pricing" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-cyber-pink font-orbitron font-bold text-sm tracking-widest uppercase">Priced For Every Gamer</span>
+                <h2 class="text-3xl sm:text-4xl font-orbitron font-black text-white">AFFORDABLE GAMING RATES</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyber-pink to-cyber-cyan mx-auto rounded-full"></div>
+                <p class="text-slate-400 font-rajdhani text-lg">
+                    High quality gaming shouldn't burn a hole in your pocket. Check out our competitive rate packages!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Rate Card 1: PC Gaming Pass -->
+                <div class="glass-panel rounded-2xl p-8 border border-slate-800 hover:border-cyber-cyan transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-orbitron font-bold text-slate-400 text-xs uppercase">PC Gaming Pass</span>
+                            <i class="fa-solid fa-desktop text-cyber-cyan text-xl"></i>
+                        </div>
+                        <h3 class="font-orbitron font-extrabold text-2xl text-white mb-2">High-End PC</h3>
+                        <div class="text-3xl font-orbitron font-black text-cyber-cyan mb-6">
+                            ₹60 <span class="text-sm font-rajdhani text-slate-400 font-normal">/ Hour</span>
+                        </div>
+                        <ul class="space-y-3 font-rajdhani text-slate-300 font-semibold mb-8 text-sm">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyber-cyan"></i> 240Hz Esports Monitors</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyber-cyan"></i> High FPS Graphics (RTX)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyber-cyan"></i> Discord / Steam / Valorant / CS2</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyber-cyan"></i> Ergonomic Seat Included</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" onclick="selectPlatform('PC Gaming Rigs')" class="w-full text-center py-3 rounded-lg border border-cyber-cyan text-cyber-cyan font-orbitron font-bold text-xs hover:bg-cyber-cyan hover:text-black transition-all">
+                        SELECT PC PASS
+                    </a>
+                </div>
+
+                <!-- Rate Card 2: PS5 / PS5 Pro Lounge -->
+                <div class="glass-panel rounded-2xl p-8 border-2 border-cyber-pink/60 relative flex flex-col justify-between shadow-xl shadow-pink-950/20">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyber-pink to-cyber-purple text-white text-[11px] font-orbitron font-black px-4 py-1 rounded-full uppercase tracking-wider">
+                        MOST POPULAR
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4 pt-2">
+                            <span class="font-orbitron font-bold text-slate-400 text-xs uppercase">Console Lounge</span>
+                            <i class="fa-brands fa-playstation text-cyber-pink text-xl"></i>
+                        </div>
+                        <h3 class="font-orbitron font-extrabold text-2xl text-white mb-2">PS5 & PS5 Pro</h3>
+                        <div class="text-3xl font-orbitron font-black text-cyber-pink mb-6">
+                            ₹100 <span class="text-sm font-rajdhani text-slate-400 font-normal">/ Hour (Multiplayer)</span>
+                        </div>
+                        <ul class="space-y-3 font-rajdhani text-slate-300 font-semibold mb-8 text-sm">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyber-pink"></i> 4K TV Big Screen Setup</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyber-pink"></i> Dual Controllers for Co-Op</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyber-pink"></i> Latest FC25, Mortal Kombat & GTA</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyber-pink"></i> Premium Sofa Lounge Seating</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" onclick="selectPlatform('PS5 / PS5 Pro Console')" class="w-full text-center py-3 rounded-lg bg-gradient-to-r from-cyber-pink to-cyber-purple text-white font-orbitron font-bold text-xs hover:opacity-90 transition-all shadow-md shadow-pink-500/30">
+                        SELECT CONSOLE PASS
+                    </a>
+                </div>
+
+                <!-- Rate Card 3: Squad Combo / Night Pack -->
+                <div class="glass-panel rounded-2xl p-8 border border-slate-800 hover:border-yellow-400 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-orbitron font-bold text-slate-400 text-xs uppercase">Squad Special</span>
+                            <i class="fa-solid fa-users text-yellow-400 text-xl"></i>
+                        </div>
+                        <h3 class="font-orbitron font-extrabold text-2xl text-white mb-2">5-Player Squad Pass</h3>
+                        <div class="text-3xl font-orbitron font-black text-yellow-400 mb-6">
+                            ₹250 <span class="text-sm font-rajdhani text-slate-400 font-normal">/ Hour (5 PCs)</span>
+                        </div>
+                        <ul class="space-y-3 font-rajdhani text-slate-300 font-semibold mb-8 text-sm">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-400"></i> Full 5-Man LAN Side-by-Side</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-400"></i> Tournament-Ready Ping</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-400"></i> Ideal for Valorant / CS2 Squads</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-400"></i> Priority Staff Support</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" onclick="selectPlatform('5-Player Squad Pass')" class="w-full text-center py-3 rounded-lg border border-yellow-400 text-yellow-400 font-orbitron font-bold text-xs hover:bg-yellow-400 hover:text-black transition-all">
+                        BOOK SQUAD PASS
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Reviews & Testimonials Section -->
+    <section id="reviews" class="py-20 bg-slate-950/80 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div class="space-y-3">
+                    <span class="text-cyber-cyan font-orbitron font-bold text-sm tracking-widest uppercase">Verified Gamers Feedback</span>
+                    <h2 class="text-3xl sm:text-4xl font-orbitron font-black text-white">4.9 ★ GOOGLE REVIEWS</h2>
+                    <p class="text-slate-400 font-rajdhani text-lg">See why over 457+ players rated us Katraj's top gaming cafe.</p>
+                </div>
+                <a href="https://maps.google.com" target="_blank" class="mt-4 md:mt-0 text-cyber-cyan font-orbitron font-bold text-sm hover:underline flex items-center gap-2">
+                    View All 457+ Reviews on Google <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Review Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="glass-panel p-6 rounded-xl border border-slate-800 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400 text-xs gap-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-slate-500 text-xs font-rajdhani font-semibold">Google Review</span>
+                        </div>
+                        <p class="text-slate-300 font-rajdhani text-base italic">
+                            "Great selection of games on high-end PCs and PS5 Pro. Smooth gaming experience with zero lag. Clean and comfortable environment with good lighting."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+                        <div class="w-9 h-9 rounded-full bg-cyber-cyan/20 border border-cyber-cyan flex items-center justify-center text-cyber-cyan font-orbitron font-bold text-sm">
+                            R
+                        </div>
+                        <div>
+                            <div class="font-orbitron font-bold text-sm text-white">Rohit Sharma</div>
+                            <div class="text-xs text-slate-400 font-rajdhani">Regular Gamer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-panel p-6 rounded-xl border border-slate-800 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400 text-xs gap-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-slate-500 text-xs font-rajdhani font-semibold">Google Review</span>
+                        </div>
+                        <p class="text-slate-300 font-rajdhani text-base italic">
+                            "Affordable prices compared to other cafes near Bharati Vidyapeeth. The staff is extremely helpful and cooperative. Highly recommended for weekend gaming!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+                        <div class="w-9 h-9 rounded-full bg-cyber-pink/20 border border-cyber-pink flex items-center justify-center text-cyber-pink font-orbitron font-bold text-sm">
+                            A
+                        </div>
+                        <div>
+                            <div class="font-orbitron font-bold text-sm text-white">Aditya Kulkarni</div>
+                            <div class="text-xs text-slate-400 font-rajdhani">Bharati Vidyapeeth Student</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-panel p-6 rounded-xl border border-slate-800 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400 text-xs gap-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-slate-500 text-xs font-rajdhani font-semibold">Google Review</span>
+                        </div>
+                        <p class="text-slate-300 font-rajdhani text-base italic">
+                            "Awesome RGB ambient lighting setup and cool AC temperature. Controllers for PS5 are well maintained and sanitized. Best cafe in Dattanagar road."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+                        <div class="w-9 h-9 rounded-full bg-yellow-400/20 border border-yellow-400 flex items-center justify-center text-yellow-400 font-orbitron font-bold text-sm">
+                            S
+                        </div>
+                        <div>
+                            <div class="font-orbitron font-bold text-sm text-white">Sanket Patil</div>
+                            <div class="text-xs text-slate-400 font-rajdhani">Console Gamer</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Slot Booking Section -->
+    <section id="booking" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-cyber-cyan/30 shadow-2xl relative">
+                
+                <div class="text-center space-y-3 mb-8">
+                    <span class="text-cyber-cyan font-orbitron font-bold text-xs tracking-widest uppercase">Quick Reservation</span>
+                    <h2 class="text-3xl font-orbitron font-black text-white">BOOK YOUR GAMING SLOT</h2>
+                    <p class="text-slate-400 font-rajdhani text-base">Fill out the form below to lock your seat before arriving!</p>
+                </div>
+
+                <form id="booking-form" onsubmit="handleBooking(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        
+                        <!-- Name -->
+                        <div>
+                            <label class="block font-orbitron text-xs font-bold text-slate-300 mb-2">FULL NAME *</label>
+                            <input type="text" id="gamer-name" required placeholder="e.g. Rahul Deshmukh" 
+                                class="w-full bg-slate-900/90 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cyber-cyan font-rajdhani text-base">
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <label class="block font-orbitron text-xs font-bold text-slate-300 mb-2">PHONE NUMBER *</label>
+                            <input type="tel" id="gamer-phone" required placeholder="e.g. 9876543210" 
+                                class="w-full bg-slate-900/90 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cyber-cyan font-rajdhani text-base">
+                        </div>
+
+                        <!-- Platform Selection -->
+                        <div>
+                            <label class="block font-orbitron text-xs font-bold text-slate-300 mb-2">CHOOSE HARDWARE *</label>
+                            <select id="gamer-platform" required class="w-full bg-slate-900/90 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyber-cyan font-rajdhani text-base">
+                                <option value="PC Gaming Rigs">High-Performance PC (RTX / 240Hz)</option>
+                                <option value="PS5 / PS5 Pro Console">PS5 / PS5 Pro Lounge</option>
+                                <option value="5-Player Squad Pass">5-Player Squad PC LAN</option>
+                            </select>
+                        </div>
+
+                        <!-- Date & Time -->
+                        <div>
+                            <label class="block font-orbitron text-xs font-bold text-slate-300 mb-2">ESTIMATED ARRIVAL TIME *</label>
+                            <input type="time" id="gamer-time" required min="14:00" max="23:00" 
+                                class="w-full bg-slate-900/90 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyber-cyan font-rajdhani text-base">
+                            <span class="text-[11px] text-slate-500 font-rajdhani">Open Daily: 2:00 PM - 11:00 PM</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Duration -->
+                    <div>
+                        <label class="block font-orbitron text-xs font-bold text-slate-300 mb-2">DURATION (HOURS)</label>
+                        <div class="grid grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="duration" value="1 Hour" class="peer hidden" checked>
+                                <div class="text-center py-2.5 rounded-lg border border-slate-700 bg-slate-900/60 font-rajdhani font-bold text-slate-300 peer-checked:border-cyber-cyan peer-checked:bg-cyber-cyan/10 peer-checked:text-cyber-cyan transition-all">
+                                    1 Hr
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="duration" value="2 Hours" class="peer hidden">
+                                <div class="text-center py-2.5 rounded-lg border border-slate-700 bg-slate-900/60 font-rajdhani font-bold text-slate-300 peer-checked:border-cyber-cyan peer-checked:bg-cyber-cyan/10 peer-checked:text-cyber-cyan transition-all">
+                                    2 Hrs
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="duration" value="3 Hours" class="peer hidden">
+                                <div class="text-center py-2.5 rounded-lg border border-slate-700 bg-slate-900/60 font-rajdhani font-bold text-slate-300 peer-checked:border-cyber-cyan peer-checked:bg-cyber-cyan/10 peer-checked:text-cyber-cyan transition-all">
+                                    3 Hrs
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="duration" value="4+ Hours" class="peer hidden">
+                                <div class="text-center py-2.5 rounded-lg border border-slate-700 bg-slate-900/60 font-rajdhani font-bold text-slate-300 peer-checked:border-cyber-cyan peer-checked:bg-cyber-cyan/10 peer-checked:text-cyber-cyan transition-all">
+                                    4+ Hrs
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyber-cyan via-purple-600 to-cyber-pink font-orbitron font-extrabold text-sm text-white tracking-widest hover:opacity-95 shadow-lg shadow-cyan-500/20 transition-all">
+                        CONFIRM SLOT RESERVATION
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="contact" class="py-20 bg-slate-950/90 border-t border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div>
+                        <span class="text-cyber-cyan font-orbitron font-bold text-sm tracking-widest uppercase">Find Us in Pune</span>
+                        <h2 class="text-3xl sm:text-4xl font-orbitron font-black text-white mt-1">LOCATION & HOURS</h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        
+                        <!-- Address -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cyber-cyan/10 border border-cyber-cyan/30 flex items-center justify-center text-cyber-cyan text-xl flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-orbitron font-bold text-white text-base">Address</h4>
+                                <p class="text-slate-300 font-rajdhani text-base leading-relaxed">
+                                    Nadbrahma Idli Dosa, Bharati Vidyapeeth Trimurti Chouk Dattanagar Road, Katraj - Ambegaon BK Rd, near Patang Plaza, opposite first floor, Maharashtra 411046
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cyber-pink/10 border border-cyber-pink/30 flex items-center justify-center text-cyber-pink text-xl flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-orbitron font-bold text-white text-base">Direct Phone Call</h4>
+                                <a href="tel:09270367171" class="text-cyber-pink font-orbitron font-bold text-xl hover:underline">
+                                    092703 67171
+                                </a>
+                                <p class="text-slate-400 font-rajdhani text-sm">Call us to check live seat availability!</p>
+                            </div>
+                        </div>
+
+                        <!-- Opening Hours -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center text-yellow-400 text-xl flex-shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-orbitron font-bold text-white text-base">Operating Hours</h4>
+                                <p class="text-slate-200 font-rajdhani text-lg font-semibold">
+                                    Open Daily: <span class="text-cyber-cyan">2:00 PM – 11:00 PM</span>
+                                </p>
+                                <p class="text-xs text-yellow-400 font-rajdhani mt-1">
+                                    *Festival hours (Diwali / Balipratipada) may vary.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Direct Navigation CTA -->
+                    <div class="pt-2">
+                        <a href="https://maps.google.com/?q=Gamearthgamezone+Pune" target="_blank" class="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white font-orbitron font-bold text-xs hover:border-cyber-cyan hover:text-cyber-cyan transition-all">
+                            <i class="fa-solid fa-map-location-dot text-cyber-cyan text-base"></i>
+                            OPEN IN GOOGLE MAPS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Map / Location Box Card -->
+                <div class="lg:col-span-6">
+                    <div class="glass-panel rounded-2xl p-4 border border-slate-800 h-full flex flex-col justify-between">
+                        <div class="relative w-full h-80 rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center group">
+                            <!-- Visual Stylized Map Graphic -->
+                            <div class="absolute inset-0 bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
+                                <div class="w-16 h-16 rounded-full bg-cyber-pink/20 border-2 border-cyber-pink flex items-center justify-center text-cyber-pink text-3xl animate-bounce mb-4">
+                                    <i class="fa-solid fa-gamepad"></i>
+                                </div>
+                                <h3 class="font-orbitron font-extrabold text-white text-xl">GAMEARTHGAMEZONE</h3>
+                                <p class="text-slate-400 font-rajdhani text-sm max-w-xs mt-2">
+                                    Near Patang Plaza, Opposite First Floor, Katraj - Ambegaon BK Rd, Pune
+                                </p>
+                                <a href="https://maps.google.com/?q=Gamearthgamezone+Pune" target="_blank" class="mt-4 px-5 py-2.5 rounded-lg bg-cyber-cyan text-black font-orbitron font-bold text-xs hover:scale-105 transition-transform">
+                                    GET DIRECTIONS
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-xs font-rajdhani text-slate-400 flex items-center justify-between">
+                            <span><i class="fa-solid fa-landmark text-cyber-cyan mr-1"></i> Landmark: Opposite Patang Plaza</span>
+                            <span class="text-emerald-400 font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Easy Parking</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                
+                <div>
+                    <span class="font-orbitron font-extrabold text-xl text-white">
+                        GAMEARTH<span class="text-cyber-cyan">ZONE</span>
+                    </span>
+                    <p class="text-slate-500 font-rajdhani text-sm mt-1">
+                        Pune's Ultimate Esports & PlayStation Lounge. All rights reserved © 2026.
+                    </p>
+                </div>
+
+                <div class="flex items-center space-x-6 text-slate-400 text-xl">
+                    <a href="#" class="hover:text-cyber-cyan transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-cyber-pink transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="hover:text-cyber-cyan transition-colors" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="tel:09270367171" class="hover:text-emerald-400 transition-colors" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal / Confirmation Toast -->
+    <div id="booking-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="glass-panel max-w-md w-full rounded-2xl p-6 border border-cyber-cyan shadow-2xl relative text-center space-y-4">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 border-2 border-emerald-400 text-emerald-400 text-3xl flex items-center justify-center mx-auto">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <h3 class="font-orbitron font-black text-2xl text-white">SLOT REQUEST SENT!</h3>
+            
+            <p id="modal-details" class="text-slate-300 font-rajdhani text-base leading-relaxed">
+                Thank you! Your booking request has been dispatched to Gamearthgamezone.
+            </p>
+
+            <div class="p-3 bg-slate-900 rounded-lg text-xs font-rajdhani text-yellow-400">
+                <i class="fa-solid fa-info-circle mr-1"></i> Please call <strong>092703 67171</strong> to instantly lock your seat.
+            </div>
+
+            <button onclick="closeModal()" class="w-full py-3 rounded-xl bg-cyber-cyan text-black font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all">
+                GOT IT, LET'S GAME!
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Dynamic Live Status Indicator (2:00 PM to 11:00 PM)
+        function checkOpenStatus() {
+            const now = new Date();
+            const currentHour = now.getHours(); // 0 - 23
+            
+            const statusBadge = document.getElementById('status-badge');
+            const statusText = document.getElementById('status-text');
+
+            // Open between 14:00 (2 PM) and 23:00 (11 PM)
+            if (currentHour >= 14 && currentHour < 23) {
+                statusText.innerText = "OPEN NOW (Closes 11 PM)";
+                statusBadge.className = "flex items-center gap-2 px-3 py-1 rounded-full text-xs font-rajdhani font-bold border border-emerald-500/40 bg-emerald-950/40 text-emerald-400";
+            } else {
+                statusText.innerText = "CLOSED NOW (Opens 2 PM)";
+                statusBadge.className = "flex items-center gap-2 px-3 py-1 rounded-full text-xs font-rajdhani font-bold border border-rose-500/40 bg-rose-950/40 text-rose-400";
+            }
+        }
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when link clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Pre-select Platform from Rate Cards
+        function selectPlatform(platformName) {
+            const platformSelect = document.getElementById('gamer-platform');
+            if (platformSelect) {
+                platformSelect.value = platformName;
+            }
+        }
+
+        // Handle Booking Form Submit
+        function handleBooking(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('gamer-name').value;
+            const phone = document.getElementById('gamer-phone').value;
+            const platform = document.getElementById('gamer-platform').value;
+            const time = document.getElementById('gamer-time').value;
+
+            const modalDetails = document.getElementById('modal-details');
+            modalDetails.innerHTML = `<strong>${name}</strong>, your reservation for <strong>${platform}</strong> around <strong>${time}</strong> has been logged!`;
+
+            const modal = document.getElementById('booking-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('booking-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.getElementById('booking-form').reset();
+        }
+
+        // Initialize status on page load
+        window.onload = function() {
+            checkOpenStatus();
+        };
+    </script>
+</body>
+</html>
